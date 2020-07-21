@@ -7,6 +7,7 @@
       "@spartacus/storefront": ["dist/storefrontlib"],
       "@spartacus/storefront/banner": ["dist/storefrontlib/banner"],
       "@spartacus/storefront/storefinder": ["dist/storefrontlib/storefinder"],
+      "@spartacus/storefront/storefinder/root": ["dist/storefrontlib/storefinder/root"],
       "@spartacus/cds": ["dist/cds"],
       "@spartacus/vendor": ["dist/vendor"],
       "@spartacus/assets": ["dist/assets"],

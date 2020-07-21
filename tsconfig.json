@@ -21,6 +21,7 @@
       "@spartacus/storefront": ["projects/storefrontlib/src/public_api"],
       "@spartacus/storefront/banner": ["projects/storefrontlib/banner/index.ts"],
       "@spartacus/storefront/storefinder": ["projects/storefrontlib/storefinder/index.ts"],
+      "@spartacus/storefront/storefinder/root": ["projects/storefrontlib/storefinder/root/index.ts"],
       "@spartacus/vendor": ["projects/vendor/public_api"],
       "@spartacus/assets": ["projects/assets/src/public_api"],
       "@spartacus/cds": ["projects/cds/public_api"],

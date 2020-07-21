@@ -11,7 +11,6 @@ import {
 } from '@spartacus/core';
 import {
   IconModule,
-  LayoutConfig,
   ListNavigationModule,
   SpinnerModule,
 } from '@spartacus/storefront';
@@ -42,7 +41,7 @@ import { StoreFinderStoreComponent } from './components/store-finder-store/store
     IconModule,
   ],
   providers: [
-    provideDefaultConfig(<CmsConfig | LayoutConfig>{
+    provideDefaultConfig(<CmsConfig>{
       cmsComponents: {
         StoreFinderComponent: {
           component: StoreFinderComponent,
@@ -72,11 +71,6 @@ import { StoreFinderStoreComponent } from './components/store-finder-store/store
               component: StoreFinderStoreComponent,
             },
           ],
-        },
-      },
-      layoutSlots: {
-        StoreFinderPageTemplate: {
-          slots: ['MiddleContent', 'SideContent'],
         },
       },
     }),
