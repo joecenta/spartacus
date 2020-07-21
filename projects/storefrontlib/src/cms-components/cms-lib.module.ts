@@ -6,7 +6,6 @@ import { CartComponentModule } from './cart/cart.module';
 import { CheckoutComponentModule } from './checkout/checkout.module';
 import { BannerCarouselModule } from './content/banner-carousel/banner-carousel.module';
 import {
-  BannerModule,
   CmsParagraphModule,
   LinkModule,
   TabParagraphContainerModule,
@@ -52,7 +51,6 @@ import {
 import { ProductImagesModule } from './product/product-images/product-images.module';
 import { ProductSummaryModule } from './product/product-summary/product-summary.module';
 import { ProductVariantsModule } from './product/product-variants/product-variants.module';
-import { StoreFinderModule } from './storefinder/store-finder.module';
 import { UserComponentModule } from './user/user.module';
 import { WishListModule } from './wish-list/wish-list.module';
 
@@ -63,7 +61,6 @@ import { WishListModule } from './wish-list/wish-list.module';
     HamburgerMenuModule,
     CmsParagraphModule,
     LinkModule,
-    BannerModule,
     CategoryNavigationModule,
     NavigationModule,
     FooterNavigationModule,
@@ -92,7 +89,6 @@ import { WishListModule } from './wish-list/wish-list.module';
     CartComponentModule,
     TabParagraphContainerModule,
     OrderConfirmationModule,
-    StoreFinderModule,
     ProductImagesModule,
     ProductSummaryModule,
     ProductVariantsModule,

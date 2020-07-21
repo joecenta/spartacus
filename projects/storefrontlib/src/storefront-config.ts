@@ -13,7 +13,6 @@ import {
   RoutingConfig,
   SiteContextConfig,
   StateConfig,
-  StoreFinderConfig,
 } from '@spartacus/core';
 import { CheckoutConfig } from './cms-components/checkout/config/checkout-config';
 import { IconConfig } from './cms-components/misc/icon/icon.model';
@@ -50,5 +49,4 @@ export type StorefrontConfig =
   | AsmConfig
   | SkipLinkConfig
   | PaginationConfig
-  | StoreFinderConfig
   | CartConfig;

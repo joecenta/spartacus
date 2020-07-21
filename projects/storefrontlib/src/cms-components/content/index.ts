@@ -1,5 +1,3 @@
-export * from './banner/banner.component';
-export * from './banner/banner.module';
 export * from './banner-carousel/banner-carousel.component';
 export * from './banner-carousel/banner-carousel.module';
 export * from './link/link.component';
