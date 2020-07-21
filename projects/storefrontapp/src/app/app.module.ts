@@ -18,6 +18,7 @@ import { b2cFeature } from '../environments/b2c/b2c.feature';
 import { cdsFeature } from '../environments/cds/cds.feature';
 import { environment } from '../environments/environment';
 import { TestOutletModule } from '../test-outlets/test-outlet.module';
+import { StoreFinderRootModule } from '@spartacus/storefront/storefinder/root';
 
 registerLocaleData(localeDe);
 registerLocaleData(localeJa);
@@ -48,7 +49,7 @@ if (environment.b2b) {
     ...additionalImports,
     TestOutletModule, // custom usages of cxOutletRef only for e2e testing
     TestConfigModule.forRoot({ cookie: 'cxConfigE2E' }), // Injects config dynamically from e2e tests. Should be imported after other config modules.
-
+    StoreFinderRootModule,
     ConfigModule.withConfig({
       layoutSlots: {
         StoreFinderPageTemplate: {
