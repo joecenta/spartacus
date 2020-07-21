@@ -8,7 +8,7 @@ import {
   BrowserTransferStateModule,
 } from '@angular/platform-browser';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { TestConfigModule } from '@spartacus/core';
+import { ConfigModule, TestConfigModule } from '@spartacus/core';
 import {
   JsonLdBuilderModule,
   StorefrontComponent,
@@ -48,6 +48,66 @@ if (environment.b2b) {
     ...additionalImports,
     TestOutletModule, // custom usages of cxOutletRef only for e2e testing
     TestConfigModule.forRoot({ cookie: 'cxConfigE2E' }), // Injects config dynamically from e2e tests. Should be imported after other config modules.
+
+    ConfigModule.withConfig({
+      layoutSlots: {
+        StoreFinderPageTemplate: {
+          slots: ['MiddleContent', 'SideContent'],
+        },
+      },
+
+      featureModules: {
+        storeFinder: {
+          module: () =>
+            import('@spartacus/storefront/storefinder').then(
+              (m) => m.StoreFinderModule
+            ),
+          dependencies: [
+            () =>
+              import('@spartacus/core/store-finder').then(
+                (m) => m.StoreFinderCoreModule
+              ),
+          ],
+          cmsComponents: ['StoreFinderComponent'],
+        },
+        banners: {
+          module: () =>
+            import('@spartacus/storefront/banner').then((m) => m.BannerModule),
+          // dependencies: [
+          //   () =>
+          //     import('@spartacus/core/store-finder').then(
+          //       (m) => m.StoreFinderCoreModule
+          //     ),
+          // ],
+          cmsComponents: [
+            'SimpleResponsiveBannerComponent',
+            'BannerComponent',
+            'SimpleBannerComponent',
+          ],
+        },
+      },
+
+      // cmsComponents: {
+      //   SimpleResponsiveBannerComponent: {
+      //     component: () =>
+      //       import('@spartacus/storefront/banner').then(
+      //         (m) => m.BannerComponent
+      //       ),
+      //   },
+      //   BannerComponent: {
+      //     component: () =>
+      //       import('@spartacus/storefront/banner').then(
+      //         (m) => m.BannerComponent
+      //       ),
+      //   },
+      //   SimpleBannerComponent: {
+      //     component: () =>
+      //       import('@spartacus/storefront/banner').then(
+      //         (m) => m.BannerComponent
+      //       ),
+      //   },
+      // },
+    }),
 
     ...devImports,
   ],

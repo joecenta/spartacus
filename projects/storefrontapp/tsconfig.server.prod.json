@@ -4,7 +4,10 @@
     "esModuleInterop": false,
     "paths": {
       "@spartacus/core": ["../../dist/core"],
+      "@spartacus/core/store-finder": ["../../dist/core/store-finder"],
       "@spartacus/storefront": ["../../dist/storefrontlib"],
+      "@spartacus/storefront/banner": ["../../dist/storefrontlib/banner"],
+      "@spartacus/storefront/storefinder": ["../../dist/storefrontlib/storefinder"],
       "@spartacus/cds": ["../../dist/cds"],
       "@spartacus/assets": ["../../dist/assets"],
       "@spartacus/my-account": ["../../dist/my-account"],
